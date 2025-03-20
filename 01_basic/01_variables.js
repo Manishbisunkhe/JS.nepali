@@ -13,6 +13,8 @@ let man ="anish";
 console.log(man);
 
 
+
+
 /*
 prefer not to use var
 because of issue in block scope and functional scope
