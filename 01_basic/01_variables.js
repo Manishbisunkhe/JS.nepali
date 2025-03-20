@@ -12,6 +12,9 @@ accountPassword = "123"
 let man ="anish";
 console.log(man);
 
+let vvv = "hunt the Dg"
+console.log(vvv);
+
 
 
 
