@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM learning on chai aur code<span style="display: none;"> test text</span></h1>
+        <p> Lorem ipsum dolor sit amet consectetur adipisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus recusandae, cumque corrupti nam provident qui nesciunt minima aliquid necessitatibus voluptates consequuntur atque a voluptate. Dolore totam non esse vel velit.</p>
+       <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+       <h2>anish is good boy</h2>
+
+       <input type="password" name="" id="">
+
+       <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li >
+        <li class="list-item">three</li>
+        <li class="list-item">four</li>
+       </ul>
+    </div>
+</body>
+</html>
+
+<!-- title.innerText
+'DOM learning on chai aur code'
+
+title.textContent
+''DOM learning on chai aur codetest text'
+
+title.innerHTML
+'DOM learning on chai aur code<span style="display: none;"> test text</span>'
+
+
+document.getElementsByClassName('heading')
+HTMLCollection [h1#title.heading, title: h1#title.heading]
+
+document.querySelector('h2')
+<h2>​Lorem ipsum dolor sit amet consectetur.​</h2>​
+
+
+to select id it needed hass tag
+document.querySelector('#title')
+<h1 id=​"title" class=​"heading">​…​</h1>​"DOM learning on chai aur code"<span style=​"display:​ none;​">​ test text​</span>​</h1>​
+
+To select class it need dot
+document.querySelector('.heading')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+
+
+document.querySelector('ul')
+<ul>​…​</ul>​
+
+const myul = document.querySelector('ul')
+undefined
+
+myul
+<ul>​…​</ul>​
+
+myul.querySelector('li')
+<li>​…​</li>​
+
+const turnGreen = myul.querySelector('li')
+undefined
+
+turnGreen
+<li>​…​</li>​
+
+turnGreen.style.backgroundColor ="green"
+'green'
+
+turnGreen.style.padding ="10px"
+'10px'
+
+turnGreen.innerText
+one
+
+turnGreen.innerText = "five"
+'five'
+
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]
+const templiList= document.querySelectorAll('li')
+undefined
+templiList
+NodeList(3) [li, li, li]
+cost myArray= [1, 2, 3 ]
+VM5171:1 Uncaught SyntaxError: Unexpected identifier 'myArray'
+const myArr =[1, 2, 3] 
+    
+undefined
+myArr
+(3) [1, 2, 3]0: 11: 22: 3length: 3[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()length: 1name: "map"arguments: (...)caller: (...)[[Prototype]]: ƒ ()[[Scopes]]: Scopes[0]pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+
+templiList
+NodeList(3) [li, li, li]
+
+templiList[1].style.color ="red"
+'red'
+
+const red = document.querySelectorAll('h1')
+undefined
+
+red
+NodeList [h1#title.heading]
+
+red[0].style.color="blue"
+'blue'
+
+templiList.forEach(function (l){})
+undefined
+templiList.forEach(function (l) {l.style.backgrooundColor="Green"})
+undefined
+ -->
+
+
+
+
+
+
+
+
+<!-- document.getElementById('title').id
+'title'
+document.getElementById('title').class
+undefined
+document.getElementById('title').className
+'heading'
+
+document.getElementById('title').getAttribute('id')
+'title'
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class', 'manish')  set changes class name
+
+-->
+
+
+<!-- we conver to access loop and many more -->
+
+<!-- document.getElementsByClassName('list-item')
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]0: li.list-item1: li.list-item2: li.list-item3: li.list-itemlength: 4[[Prototype]]: HTMLCollectionitem: ƒ item()length: (...)namedItem: ƒ namedItem()constructor: ƒ HTMLCollection()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "HTMLCollection"get length: ƒ length()[[Prototype]]: Object
+const templiList=document.getElementsByClassName('list-item')
+undefined
+templiList
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+Array.from(templiList)
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const myConvertedArray=Array.from(templiList)
+undefined
+myConvertedArray
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+myConvertedArray.forEach(function(li){
+    li.style.color ="orange"
+})
+undefined -->
+
+
+
+
+
