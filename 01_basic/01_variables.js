@@ -12,7 +12,7 @@ accountPassword = "123"
 let man ="anish";
 console.log(man);
 
-let vvv = "hunt  Dg"
+let vvv = "hunt Dg"
 console.log(vvv);
 
 
